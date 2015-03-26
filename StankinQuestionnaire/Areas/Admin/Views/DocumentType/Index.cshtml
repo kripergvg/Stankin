@@ -1,0 +1,26 @@
+﻿@model IEnumerable<StankinQuestionnaire.Model.DocumentType>
+@{
+    ViewBag.Title = "Типы документов";
+}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <td>Название</td>
+            <td>Дата изменения</td>
+            <td>Дата создания</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var documentType in Model)
+        {
+            <tr>
+                <td>@documentType.Name</td>
+                <td>@documentType.DateChanged</td>
+                <td>@documentType.DateCreated</td>
+            </tr>
+
+        }
+    </tbody>
+</table>
+
+

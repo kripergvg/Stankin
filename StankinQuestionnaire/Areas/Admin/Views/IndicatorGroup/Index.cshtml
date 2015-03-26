@@ -1,0 +1,24 @@
+﻿@model IEnumerable<StankinQuestionnaire.Model.IndicatorGroup>
+@{
+    ViewBag.Title = "Группы показателей";
+}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <td>Название</td>
+            <td>Дата изменения</td>
+            <td>Дата создания</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var indicatorGroup in Model)
+        {
+            <tr>
+                <td>@indicatorGroup.Name</td>
+                <td>@indicatorGroup.DateChanged</td>
+                <td>@indicatorGroup.DateCreated</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
